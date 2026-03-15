@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Parasky — Desenvolvedor Back-end</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Gabriel Parasky</div>
+      <ul class="nav-links">
+        <li><a class="nav-link active" data-page="home">Início</a></li>
+        <li><a class="nav-link" data-page="projects">Projetos</a></li>
+        <li><a class="nav-link" data-page="contact">Entre em Contato</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a class="mobile-link active" data-page="home">Início</a>
+      <a class="mobile-link" data-page="projects">Projetos</a>
+      <a class="mobile-link" data-page="contact">Entre em Contato</a>
+    </div>
+  </header>
+
+  <!-- ===== HOME ===== -->
+  <main id="page-home" class="page active">
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="avatar">GRP</div>
+        <h1>Gabriel Rodrigo Parasky</h1>
+        <p class="role">Desenvolvedor Back-end</p>
+        <p class="tagline">Focado em integração e extração de dados para consolidação de informação interna — apaixonado por resolver problemas complexos com qualidade e melhoria contínua.</p>
+        <div class="hero-btns">
+          <button class="btn btn-primary" data-goto="projects">Ver Projetos</button>
+          <button class="btn btn-outline" data-goto="contact">Entre em Contato</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Desenvolvedor Back-end com <strong>6+ anos de experiência</strong>, focado em integração e extração de dados para consolidação de informação interna. Apaixonado desde muito novo em resolver problemas complexos e me aperfeiçoar ao longo do caminho.</p>
+            <p>Experiência com times ágeis, Scrum/Kanban e entrega contínua. Foco bastante na qualidade da entrega, garantindo o melhor para o cliente final.</p>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Localização</span>
+                <span>Indaial, SC — Brasil</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Disponibilidade</span>
+                <span class="badge-available">Aberto a propostas</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Modalidade</span>
+                <span>Remoto · Híbrido · Presencial</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Idiomas</span>
+                <span>Português (nativo) · Inglês (intermediário) · Alemão (básico)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-panel">
+            <h3>Stack Principal</h3>
+            <div class="skill-group">
+              <h4>Back-end</h4>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">pandas</span>
+                <span class="tag">polars</span>
+                <span class="tag">FastAPI</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Banco de Dados</h4>
+              <div class="tags">
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">DBeaver</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Infra &amp; DevOps</h4>
+              <div class="tags">
+                <span class="tag">Docker</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">Linux</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Cloud</h4>
+              <div class="tags">
+                <span class="tag">GCP</span>
+                <span class="tag">AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <div class="container">
+        <h2 class="section-title">Experiência</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <h3>Desenvolvedor de Integrações</h3>
+                  <p class="company">UpFlux Process Mining</p>
+                </div>
+                <span class="period">Nov. 2025 — Presente</span>
+              </div>
+              <p>Tem atuado no desenvolvimento de integrações para novos clientes com ERP Totvs, além de atuar diretamente na implementação de novas funcionalidades e correções no produto padrão da integração.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <h3>Analista de Integração</h3>
+                  <p class="company">Oto CRM</p>
+                </div>
+                <span class="period">Jan. 2025 — Out. 2025</span>
+              </div>
+              <p>Desenvolveu 10 integrações para novos clientes, tratando da extração, normalização e transformação dos dados conforme Data Model da empresa. Apoiou em ajustes e correções nas integrações de empresas como Adidas, Nike, Natura, entre outras.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <h3>Analista de Implantação</h3>
+                  <p class="company">FW7 Soluções</p>
+                </div>
+                <span class="period">Jan. 2024 — Dez. 2024</span>
+              </div>
+              <p>Atuou diretamente com mais de 40 clientes, realizando treinamentos com foco na plataforma de Ecommerce B2B e B2C, desenvolvimento de integrações com diversos ERPs e criação de customizações específicas para cada negócio.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="education">
+      <div class="container">
+        <h2 class="section-title">Formação</h2>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div>
+              <h3>Curso Técnico de Informática</h3>
+              <p class="edu-place">Cedup Hermann Hering</p>
+              <p class="edu-year">Fev. 2018 — Dez. 2020</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon">🏅</div>
+            <div>
+              <h3>Desenvolvedor de Sistemas em Python</h3>
+              <p class="edu-place">ProWay &amp; Ambev Tech</p>
+              <p class="edu-year">Nov. 2019 — Mar. 2020</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PROJECTS ===== -->
+  <main id="page-projects" class="page">
+    <div class="container page-wrap">
+      <h2 class="section-title">Projetos</h2>
+      <p class="page-sub">Trabalhos e contribuições em destaque.</p>
+      <div class="wip-box">
+        <span class="wip-icon">🚧</span>
+        <h3>Em construção...</h3>
+        <p>Esta seção está sendo preparada. Em breve os projetos estarão disponíveis aqui.</p>
+        <a href="https://github.com/GRParasky" target="_blank" rel="noopener" class="btn btn-primary">
+          Ver meu GitHub
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== CONTACT ===== -->
+  <main id="page-contact" class="page">
+    <div class="container page-wrap">
+      <h2 class="section-title">Entre em Contato</h2>
+      <p class="page-sub">Tem uma oportunidade, projeto ou quer bater um papo? Estou por aqui.</p>
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <h3>Vamos conversar</h3>
+          <p>Estou aberto a novas oportunidades, projetos ou colaborações. Respondo em até 24 horas.</p>
+          <div class="contact-links">
+            <a href="mailto:grparasky@gmail.com" class="contact-item">
+              <span class="c-icon">✉️</span>
+              <div>
+                <strong>E-mail</strong>
+                <span>grparasky@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/grparasky/" target="_blank" rel="noopener" class="contact-item">
+              <span class="c-icon">💼</span>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>linkedin.com/in/grparasky</span>
+              </div>
+            </a>
+            <a href="https://github.com/GRParasky" target="_blank" rel="noopener" class="contact-item">
+              <span class="c-icon">🐙</span>
+              <div>
+                <strong>GitHub</strong>
+                <span>github.com/GRParasky</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" placeholder="Ex: Oportunidade de emprego" />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+          <p class="form-success" id="formSuccess">✅ Mensagem enviada! Entrarei em contato em breve.</p>
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Feito com ❤️ por Gabriel Parasky · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
