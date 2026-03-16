@@ -81,6 +81,30 @@ header {
 .nav-link:hover { color: var(--text); background: var(--bg3); }
 .nav-link.active { color: #fff; background: var(--accent); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.lang-toggle:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--bg3);
+}
+
 .menu-toggle {
   display: none;
   background: none;
@@ -288,6 +312,29 @@ header {
 
 .timeline-item { position: relative; margin-bottom: 2.5rem; padding-left: 1.75rem; }
 .timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-extra {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  /* compensate so the absolutely-positioned tl-dot isn't clipped */
+  margin-left: -2rem;
+  padding-left: 2rem;
+}
+.timeline-extra.open {
+  max-height: 600px;
+  opacity: 1;
+}
+
+.exp-toggle-wrap {
+  margin-top: 2rem;
+  text-align: center;
+}
+.exp-toggle {
+  font-size: 0.9rem;
+  padding: 0.5rem 1.5rem;
+}
 
 .tl-dot {
   position: absolute;

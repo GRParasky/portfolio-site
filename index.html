@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gabriel Parasky — Desenvolvedor Back-end</title>
+  <title>Gabriel Parasky — Backend Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,16 +12,19 @@
     <nav class="navbar">
       <div class="logo">Gabriel Parasky</div>
       <ul class="nav-links">
-        <li><a class="nav-link active" data-page="home">Início</a></li>
-        <li><a class="nav-link" data-page="projects">Projetos</a></li>
-        <li><a class="nav-link" data-page="contact">Entre em Contato</a></li>
+        <li><a class="nav-link active" data-page="home" data-i18n="nav-home">Home</a></li>
+        <li><a class="nav-link" data-page="projects" data-i18n="nav-projects">Projects</a></li>
+        <li><a class="nav-link" data-page="contact" data-i18n="nav-contact">Contact</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">PT</button>
+        <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+      </div>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
-      <a class="mobile-link active" data-page="home">Início</a>
-      <a class="mobile-link" data-page="projects">Projetos</a>
-      <a class="mobile-link" data-page="contact">Entre em Contato</a>
+      <a class="mobile-link active" data-page="home" data-i18n="nav-home">Home</a>
+      <a class="mobile-link" data-page="projects" data-i18n="nav-projects">Projects</a>
+      <a class="mobile-link" data-page="contact" data-i18n="nav-contact">Contact</a>
     </div>
   </header>
 
@@ -32,44 +35,44 @@
       <div class="hero-content">
         <div class="avatar">GRP</div>
         <h1>Gabriel Rodrigo Parasky</h1>
-        <p class="role">Desenvolvedor Back-end</p>
-        <p class="tagline">Focado em integração e extração de dados para consolidação de informação interna — apaixonado por resolver problemas complexos com qualidade e melhoria contínua.</p>
+        <p class="role" data-i18n="hero-role">Backend Developer</p>
+        <p class="tagline" data-i18n="hero-tagline">Focused on data integration and extraction for internal information consolidation — passionate about solving complex problems with quality and continuous improvement.</p>
         <div class="hero-btns">
-          <button class="btn btn-primary" data-goto="projects">Ver Projetos</button>
-          <button class="btn btn-outline" data-goto="contact">Entre em Contato</button>
+          <button class="btn btn-primary" data-goto="projects" data-i18n="hero-btn-projects">View Projects</button>
+          <button class="btn btn-outline" data-goto="contact" data-i18n="hero-btn-contact">Get in Touch</button>
         </div>
       </div>
     </section>
 
     <section class="about">
       <div class="container">
-        <h2 class="section-title">Sobre Mim</h2>
+        <h2 class="section-title" data-i18n="about-title">About Me</h2>
         <div class="about-grid">
           <div class="about-text">
-            <p>Desenvolvedor Back-end com <strong>6+ anos de experiência</strong>, focado em integração e extração de dados para consolidação de informação interna. Apaixonado desde muito novo em resolver problemas complexos e me aperfeiçoar ao longo do caminho.</p>
-            <p>Experiência com times ágeis, Scrum/Kanban e entrega contínua. Foco bastante na qualidade da entrega, garantindo o melhor para o cliente final.</p>
+            <p data-i18n-html="about-p1">Backend Developer with <strong>6+ years of experience</strong>, specializing in data integration and extraction for internal information consolidation. Passionate from an early age about solving complex problems and continuously refining my craft.</p>
+            <p data-i18n="about-p2">Experienced working with agile teams using Scrum and Kanban methodologies, with a strong focus on continuous delivery and ensuring the highest quality for end clients.</p>
             <div class="info-grid">
               <div class="info-item">
-                <span class="info-label">Localização</span>
-                <span>Indaial, SC — Brasil</span>
+                <span class="info-label" data-i18n="info-location-label">Location</span>
+                <span>Indaial, SC — Brazil</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Disponibilidade</span>
-                <span class="badge-available">Aberto a propostas</span>
+                <span class="info-label" data-i18n="info-availability-label">Availability</span>
+                <span class="badge-available" data-i18n="info-availability-value">Open to Opportunities</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Modalidade</span>
-                <span>Remoto · Híbrido · Presencial</span>
+                <span class="info-label" data-i18n="info-workmode-label">Work Mode</span>
+                <span data-i18n="info-workmode-value">Remote · Hybrid · On-site</span>
               </div>
               <div class="info-item">
-                <span class="info-label">Idiomas</span>
-                <span>Português (nativo) · Inglês (intermediário) · Alemão (básico)</span>
+                <span class="info-label" data-i18n="info-languages-label">Languages</span>
+                <span data-i18n="info-languages-value">Portuguese (native) · English (intermediate) · German (basic)</span>
               </div>
             </div>
           </div>
 
           <div class="skills-panel">
-            <h3>Stack Principal</h3>
+            <h3 data-i18n="skills-title">Core Stack</h3>
             <div class="skill-group">
               <h4>Back-end</h4>
               <div class="tags">
@@ -80,7 +83,7 @@
               </div>
             </div>
             <div class="skill-group">
-              <h4>Banco de Dados</h4>
+              <h4 data-i18n="skills-databases">Databases</h4>
               <div class="tags">
                 <span class="tag">PostgreSQL</span>
                 <span class="tag">DBeaver</span>
@@ -109,7 +112,7 @@
 
     <section class="experience">
       <div class="container">
-        <h2 class="section-title">Experiência</h2>
+        <h2 class="section-title" data-i18n="exp-title">Experience</h2>
         <div class="timeline">
 
           <div class="timeline-item">
@@ -117,12 +120,12 @@
             <div class="tl-content">
               <div class="tl-header">
                 <div>
-                  <h3>Desenvolvedor de Integrações</h3>
+                  <h3 data-i18n="exp1-role">Integration Developer</h3>
                   <p class="company">UpFlux Process Mining</p>
                 </div>
-                <span class="period">Nov. 2025 — Presente</span>
+                <span class="period" data-i18n="exp1-period">Nov. 2025 — Present</span>
               </div>
-              <p>Tem atuado no desenvolvimento de integrações para novos clientes com ERP Totvs, além de atuar diretamente na implementação de novas funcionalidades e correções no produto padrão da integração.</p>
+              <p data-i18n="exp1-desc">Working on the development of integrations for new clients using the Totvs ERP, as well as directly contributing to the implementation of new features and bug fixes in the standard integration product.</p>
             </div>
           </div>
 
@@ -131,12 +134,12 @@
             <div class="tl-content">
               <div class="tl-header">
                 <div>
-                  <h3>Analista de Integração</h3>
+                  <h3 data-i18n="exp2-role">Integration Analyst</h3>
                   <p class="company">Oto CRM</p>
                 </div>
-                <span class="period">Jan. 2025 — Out. 2025</span>
+                <span class="period" data-i18n="exp2-period">Jan. 2025 — Oct. 2025</span>
               </div>
-              <p>Desenvolveu 10 integrações para novos clientes, tratando da extração, normalização e transformação dos dados conforme Data Model da empresa. Apoiou em ajustes e correções nas integrações de empresas como Adidas, Nike, Natura, entre outras.</p>
+              <p data-i18n="exp2-desc">Developed 10 integrations for new clients, handling data extraction, normalization, and transformation according to the company's data model. Supported maintenance and bug fixes for integrations with brands such as Adidas, Nike, and Natura, among others.</p>
             </div>
           </div>
 
@@ -145,37 +148,59 @@
             <div class="tl-content">
               <div class="tl-header">
                 <div>
-                  <h3>Analista de Implantação</h3>
+                  <h3 data-i18n="exp3-role">Implementation Analyst</h3>
                   <p class="company">FW7 Soluções</p>
                 </div>
-                <span class="period">Jan. 2024 — Dez. 2024</span>
+                <span class="period" data-i18n="exp3-period">Jan. 2024 — Dec. 2024</span>
               </div>
-              <p>Atuou diretamente com mais de 40 clientes, realizando treinamentos com foco na plataforma de Ecommerce B2B e B2C, desenvolvimento de integrações com diversos ERPs e criação de customizações específicas para cada negócio.</p>
+              <p data-i18n="exp3-desc">Worked directly with over 40 clients, delivering training sessions focused on B2B and B2C e-commerce platforms, developing ERP integrations, and building custom solutions tailored to each client's business needs.</p>
+            </div>
+          </div>
+
+          <!-- Extra experiences (hidden by default) -->
+          <div class="timeline-extra" id="timelineExtra">
+            <div class="timeline-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <div class="tl-header">
+                  <div>
+                    <h3 data-i18n="exp4-role">Data Intern</h3>
+                    <p class="company">Kovi</p>
+                  </div>
+                  <span class="period" data-i18n="exp4-period">Jun. 2021 — Jun. 2022</span>
+                </div>
+                <p data-i18n="exp4-desc">Developed ETL processes for internal data extraction, making data available for querying across multiple management dashboards.</p>
+              </div>
             </div>
           </div>
 
         </div>
+
+        <div class="exp-toggle-wrap">
+          <button class="btn btn-outline exp-toggle" id="expToggle" data-i18n="exp-show-more">Show full experience</button>
+        </div>
+
       </div>
     </section>
 
     <section class="education">
       <div class="container">
-        <h2 class="section-title">Formação</h2>
+        <h2 class="section-title" data-i18n="edu-title">Education</h2>
         <div class="edu-grid">
           <div class="edu-card">
             <div class="edu-icon">🎓</div>
             <div>
-              <h3>Curso Técnico de Informática</h3>
+              <h3 data-i18n="edu1-course">Technical Degree in Computer Science</h3>
               <p class="edu-place">Cedup Hermann Hering</p>
-              <p class="edu-year">Fev. 2018 — Dez. 2020</p>
+              <p class="edu-year" data-i18n="edu1-period">Feb. 2018 — Dec. 2020</p>
             </div>
           </div>
           <div class="edu-card">
             <div class="edu-icon">🏅</div>
             <div>
-              <h3>Desenvolvedor de Sistemas em Python</h3>
+              <h3 data-i18n="edu2-course">Python Systems Developer</h3>
               <p class="edu-place">ProWay &amp; Ambev Tech</p>
-              <p class="edu-year">Nov. 2019 — Mar. 2020</p>
+              <p class="edu-year" data-i18n="edu2-period">Nov. 2019 — Mar. 2020</p>
             </div>
           </div>
         </div>
@@ -187,14 +212,14 @@
   <!-- ===== PROJECTS ===== -->
   <main id="page-projects" class="page">
     <div class="container page-wrap">
-      <h2 class="section-title">Projetos</h2>
-      <p class="page-sub">Trabalhos e contribuições em destaque.</p>
+      <h2 class="section-title" data-i18n="projects-title">Projects</h2>
+      <p class="page-sub" data-i18n="projects-sub">Featured works and contributions.</p>
       <div class="wip-box">
         <span class="wip-icon">🚧</span>
-        <h3>Em construção...</h3>
-        <p>Esta seção está sendo preparada. Em breve os projetos estarão disponíveis aqui.</p>
-        <a href="https://github.com/GRParasky" target="_blank" rel="noopener" class="btn btn-primary">
-          Ver meu GitHub
+        <h3 data-i18n="wip-title">Under Construction...</h3>
+        <p data-i18n="wip-desc">This section is currently being prepared. Projects will be available here soon.</p>
+        <a href="https://github.com/GRParasky" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="wip-github">
+          View my GitHub
         </a>
       </div>
     </div>
@@ -203,13 +228,13 @@
   <!-- ===== CONTACT ===== -->
   <main id="page-contact" class="page">
     <div class="container page-wrap">
-      <h2 class="section-title">Entre em Contato</h2>
-      <p class="page-sub">Tem uma oportunidade, projeto ou quer bater um papo? Estou por aqui.</p>
+      <h2 class="section-title" data-i18n="contact-title">Get in Touch</h2>
+      <p class="page-sub" data-i18n="contact-sub">Have an opportunity, a project idea, or just want to connect? I'd love to hear from you.</p>
       <div class="contact-grid">
 
         <div class="contact-info">
-          <h3>Vamos conversar</h3>
-          <p>Estou aberto a novas oportunidades, projetos ou colaborações. Respondo em até 24 horas.</p>
+          <h3 data-i18n="contact-talk-title">Let's Talk</h3>
+          <p data-i18n="contact-talk-desc">I'm open to new opportunities, projects, and collaborations. I typically respond within 24 hours.</p>
           <div class="contact-links">
             <a href="mailto:grparasky@gmail.com" class="contact-item">
               <span class="c-icon">✉️</span>
@@ -237,23 +262,23 @@
 
         <form class="contact-form" id="contactForm" novalidate>
           <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" id="name" placeholder="Seu nome completo" required />
+            <label for="name" data-i18n="form-name-label">Name</label>
+            <input type="text" id="name" data-i18n-placeholder="form-name-placeholder" placeholder="Your full name" required />
           </div>
           <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="seu@email.com" required />
+            <input type="email" id="email" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
-            <label for="subject">Assunto</label>
-            <input type="text" id="subject" placeholder="Ex: Oportunidade de emprego" />
+            <label for="subject" data-i18n="form-subject-label">Subject</label>
+            <input type="text" id="subject" data-i18n-placeholder="form-subject-placeholder" placeholder="e.g., Job opportunity" />
           </div>
           <div class="form-group">
-            <label for="message">Mensagem</label>
-            <textarea id="message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+            <label for="message" data-i18n="form-message-label">Message</label>
+            <textarea id="message" rows="5" data-i18n-placeholder="form-message-placeholder" placeholder="Write your message..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
-          <p class="form-success" id="formSuccess">✅ Mensagem enviada! Entrarei em contato em breve.</p>
+          <button type="submit" class="btn btn-primary btn-full" data-i18n="form-submit">Send Message</button>
+          <p class="form-success" id="formSuccess" data-i18n="form-success">✅ Message sent! I'll get back to you soon.</p>
         </form>
 
       </div>
@@ -262,7 +287,7 @@
 
   <footer>
     <div class="container">
-      <p>Feito com ❤️ por Gabriel Parasky · <span id="year"></span></p>
+      <p><span data-i18n="footer-text">Made with ❤️ by Gabriel Parasky ·</span> <span id="year"></span></p>
     </div>
   </footer>
 
