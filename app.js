@@ -228,5 +228,31 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   }, 1200);
 });
 
+// ===== SCROLL ANIMATIONS =====
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      scrollObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+// Stagger timeline items and edu cards by group
+document.querySelectorAll('.timeline-item').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.1}s`;
+});
+document.querySelectorAll('.edu-card').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.12}s`;
+});
+// Stagger the 3 about columns
+const aboutCols = ['.about-photo', '.about-text', '.skills-panel'];
+aboutCols.forEach((sel, i) => {
+  const el = document.querySelector(sel);
+  if (el) el.style.transitionDelay = `${i * 0.12}s`;
+});
+
+document.querySelectorAll('.fade-up').forEach(el => scrollObserver.observe(el));
+
 // ===== FOOTER YEAR =====
 document.getElementById('year').textContent = new Date().getFullYear();

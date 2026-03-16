@@ -33,7 +33,6 @@
 
     <section class="hero">
       <div class="hero-content">
-        <div class="avatar">GRP</div>
         <h1>Gabriel Rodrigo Parasky</h1>
         <p class="role" data-i18n="hero-role">Backend Developer</p>
         <p class="tagline" data-i18n="hero-tagline">Focused on data integration and extraction for internal information consolidation — passionate about solving complex problems with quality and continuous improvement.</p>
@@ -46,9 +45,15 @@
 
     <section class="about">
       <div class="container">
-        <h2 class="section-title" data-i18n="about-title">About Me</h2>
+        <h2 class="section-title fade-up" data-i18n="about-title">About Me</h2>
         <div class="about-grid">
-          <div class="about-text">
+
+          <!-- ↓ Substitua "foto.jpg" pelo caminho da sua foto -->
+          <div class="about-photo fade-up">
+            <img src="foto.jpg" alt="Gabriel Parasky" class="profile-photo" />
+          </div>
+
+          <div class="about-text fade-up">
             <p data-i18n-html="about-p1">Backend Developer with <strong>6+ years of experience</strong>, specializing in data integration and extraction for internal information consolidation. Passionate from an early age about solving complex problems and continuously refining my craft.</p>
             <p data-i18n="about-p2">Experienced working with agile teams using Scrum and Kanban methodologies, with a strong focus on continuous delivery and ensuring the highest quality for end clients.</p>
             <div class="info-grid">
@@ -71,7 +76,7 @@
             </div>
           </div>
 
-          <div class="skills-panel">
+          <div class="skills-panel fade-up">
             <h3 data-i18n="skills-title">Core Stack</h3>
             <div class="skill-group">
               <h4>Back-end</h4>
@@ -106,16 +111,17 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <section class="experience">
       <div class="container">
-        <h2 class="section-title" data-i18n="exp-title">Experience</h2>
+        <h2 class="section-title fade-up" data-i18n="exp-title">Experience</h2>
         <div class="timeline">
 
-          <div class="timeline-item">
+          <div class="timeline-item fade-up">
             <div class="tl-dot"></div>
             <div class="tl-content">
               <div class="tl-header">
@@ -129,7 +135,7 @@
             </div>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item fade-up">
             <div class="tl-dot"></div>
             <div class="tl-content">
               <div class="tl-header">
@@ -143,7 +149,7 @@
             </div>
           </div>
 
-          <div class="timeline-item">
+          <div class="timeline-item fade-up">
             <div class="tl-dot"></div>
             <div class="tl-content">
               <div class="tl-header">
@@ -185,9 +191,9 @@
 
     <section class="education">
       <div class="container">
-        <h2 class="section-title" data-i18n="edu-title">Education</h2>
+        <h2 class="section-title fade-up" data-i18n="edu-title">Education</h2>
         <div class="edu-grid">
-          <div class="edu-card">
+          <div class="edu-card fade-up">
             <div class="edu-icon">🎓</div>
             <div>
               <h3 data-i18n="edu1-course">Technical Degree in Computer Science</h3>
@@ -195,7 +201,7 @@
               <p class="edu-year" data-i18n="edu1-period">Feb. 2018 — Dec. 2020</p>
             </div>
           </div>
-          <div class="edu-card">
+          <div class="edu-card fade-up">
             <div class="edu-icon">🏅</div>
             <div>
               <h3 data-i18n="edu2-course">Python Systems Developer</h3>
@@ -214,7 +220,7 @@
     <div class="container page-wrap">
       <h2 class="section-title" data-i18n="projects-title">Projects</h2>
       <p class="page-sub" data-i18n="projects-sub">Featured works and contributions.</p>
-      <div class="wip-box">
+      <div class="wip-box fade-up">
         <span class="wip-icon">🚧</span>
         <h3 data-i18n="wip-title">Under Construction...</h3>
         <p data-i18n="wip-desc">This section is currently being prepared. Projects will be available here soon.</p>
@@ -232,7 +238,7 @@
       <p class="page-sub" data-i18n="contact-sub">Have an opportunity, a project idea, or just want to connect? I'd love to hear from you.</p>
       <div class="contact-grid">
 
-        <div class="contact-info">
+        <div class="contact-info fade-up">
           <h3 data-i18n="contact-talk-title">Let's Talk</h3>
           <p data-i18n="contact-talk-desc">I'm open to new opportunities, projects, and collaborations. I typically respond within 24 hours.</p>
           <div class="contact-links">
@@ -260,7 +266,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form fade-up" id="contactForm" novalidate>
           <div class="form-group">
             <label for="name" data-i18n="form-name-label">Name</label>
             <input type="text" id="name" data-i18n-placeholder="form-name-placeholder" placeholder="Your full name" required />
