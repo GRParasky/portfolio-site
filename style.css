@@ -364,9 +364,7 @@ header {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.25rem 1.5rem;
-  transition: border-color 0.2s;
 }
-.tl-content:hover { border-color: var(--accent); }
 
 .tl-header {
   display: flex;
@@ -406,7 +404,6 @@ header {
   align-items: flex-start;
   transition: border-color 0.2s;
 }
-.edu-card:hover { border-color: var(--accent); }
 .edu-icon { font-size: 2rem; line-height: 1; }
 .edu-card h3 { font-size: 0.95rem; color: #fff; margin-bottom: 0.3rem; }
 .edu-place { font-size: 0.85rem; color: var(--accent2); }
