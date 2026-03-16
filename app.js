@@ -54,6 +54,9 @@ const translations = {
     'form-sending':           'Sending...',
     'form-success':           "✅ Message sent! I'll get back to you soon.",
     'footer-text':            'Made with ❤️ by Gabriel Parasky ·',
+    'title-home':             'Home — GRParasky',
+    'title-projects':         'Projects — GRParasky',
+    'title-contact':          'Contact — GRParasky',
     'exp4-role':              'Data Intern',
     'exp4-period':            'Jun. 2021 — Jun. 2022',
     'exp4-desc':              'Developed ETL processes for internal data extraction, making data available for querying across multiple management dashboards.',
@@ -114,6 +117,9 @@ const translations = {
     'form-sending':           'Enviando...',
     'form-success':           '✅ Mensagem enviada! Entrarei em contato em breve.',
     'footer-text':            'Feito com ❤️ por Gabriel Parasky ·',
+    'title-home':             'Início — GRParasky',
+    'title-projects':         'Projetos — GRParasky',
+    'title-contact':          'Contato — GRParasky',
     'exp4-role':              'Estagiário de Dados',
     'exp4-period':            'Jun. 2021 — Jun. 2022',
     'exp4-desc':              'Desenvolveu processos de ETL para extração de dados internos, disponibilizando dados para consulta em diferentes Dashboards usados pela gestão.',
@@ -123,6 +129,7 @@ const translations = {
 };
 
 let currentLang = 'en';
+let currentPage = 'home';
 
 function applyTranslations(lang) {
   currentLang = lang;
@@ -148,9 +155,7 @@ function applyTranslations(lang) {
 
   // HTML lang attribute and page title
   document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
-  document.title = lang === 'en'
-    ? 'Gabriel Parasky — Backend Developer'
-    : 'Gabriel Parasky — Desenvolvedor Back-end';
+  document.title = translations[lang]['title-' + currentPage];
 
   // Toggle button label (shows the language you can switch TO)
   document.getElementById('langToggle').textContent = lang === 'en' ? 'PT' : 'EN';
@@ -177,6 +182,9 @@ document.getElementById('expToggle').addEventListener('click', () => {
 
 // ===== NAVIGATION =====
 function navigate(page) {
+  currentPage = page;
+  document.title = translations[currentLang]['title-' + page];
+
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   const target = document.getElementById('page-' + page);
   if (target) target.classList.add('active');
