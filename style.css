@@ -428,6 +428,17 @@ header {
 .wip-box h3 { font-size: 1.4rem; color: #fff; }
 .wip-box p { color: var(--muted); }
 
+.badge-wip {
+  display: inline-block;
+  background: rgba(251,191,36,0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(251,191,36,0.3);
+  border-radius: 20px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
 /* ===== PROJECTS ===== */
 .projects-grid {
   display: grid;
@@ -469,6 +480,7 @@ header {
 
 .proj-header { display: flex; justify-content: space-between; align-items: center; }
 .proj-icon { font-size: 2rem; }
+.proj-icon-img { width: 2.5rem; height: 2.5rem; object-fit: contain; }
 .proj-links { display: flex; gap: 0.5rem; }
 .proj-link {
   font-size: 0.78rem;
