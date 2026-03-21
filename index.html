@@ -342,5 +342,11 @@
   </footer>
 
   <script src="app.js"></script>
+  <script>
+    if (new URLSearchParams(window.location.search).get('lang') === 'pt') {
+      const btn = document.getElementById('langToggle')
+      if (btn && btn.textContent.trim() === 'PT') btn.click()
+    }
+  </script>
 </body>
 </html>
