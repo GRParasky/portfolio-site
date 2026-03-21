@@ -227,7 +227,7 @@ document.querySelector('.menu-toggle').addEventListener('click', () => {
 });
 
 // ===== CONTACT FORM =====
-document.getElementById('contactForm').addEventListener('submit', function (e) {
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const name    = document.getElementById('name').value.trim();
@@ -240,14 +240,27 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   btn.textContent = translations[currentLang]['form-sending'];
   btn.disabled = true;
 
-  setTimeout(() => {
-    const successEl = document.getElementById('formSuccess');
-    successEl.textContent = translations[currentLang]['form-success'];
-    successEl.classList.add('show');
-    this.reset();
+  try {
+    const res = await fetch('https://formspree.io/f/mkoqazql', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(this),
+    });
+
+    if (res.ok) {
+      const successEl = document.getElementById('formSuccess');
+      successEl.textContent = translations[currentLang]['form-success'];
+      successEl.classList.add('show');
+      this.reset();
+    } else {
+      alert('Erro ao enviar. Tente novamente.');
+    }
+  } catch {
+    alert('Erro de conexão. Tente novamente.');
+  } finally {
     btn.textContent = translations[currentLang]['form-submit'];
     btn.disabled = false;
-  }, 1200);
+  }
 });
 
 // ===== SCROLL ANIMATIONS =====
