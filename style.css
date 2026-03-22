@@ -439,6 +439,26 @@ header {
   font-weight: 600;
 }
 
+.badge-live {
+  display: inline-block;
+  background: rgba(52,211,153,0.12);
+  color: var(--success);
+  border: 1px solid rgba(52,211,153,0.3);
+  border-radius: 20px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.proj-preview {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
 /* ===== PROJECTS ===== */
 .projects-grid {
   display: grid;
