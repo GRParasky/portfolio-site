@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-current-page="home">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home — GRParasky</title>
+  <title>Gabriel Parasky — Backend Developer | Python &amp; Java</title>
 
   <!-- ===== SEO: META ===== -->
-  <meta name="description" content="Gabriel Rodrigo Parasky — Backend Developer with 6+ years of experience specializing in data integration, ETL processes, and Python development. Open to new opportunities." />
+  <meta name="description" content="Gabriel Rodrigo Parasky — Backend Developer with 6+ years of experience in Python, data integration and ETL. Currently transitioning to Java and Spring Boot. Open to new opportunities." />
   <meta name="author" content="Gabriel Rodrigo Parasky" />
   <meta name="robots" content="index, follow" />
   <meta name="google-site-verification" content="zPst24VnoP1K4fSo1nceCySUo85jEdkOX1s8OXf9bBM" />
-  
-  <link rel="canonical" href="https://grparasky.github.io/portfolio-site/" />
+
+  <link rel="canonical" href="https://gabrielparasky.com.br/" />
 
   <!-- ===== SEO: OPEN GRAPH (LinkedIn, WhatsApp, etc.) ===== -->
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="Gabriel Parasky — Backend Developer" />
-  <meta property="og:description" content="Backend Developer with 6+ years of experience in data integration, ETL and Python. Open to new opportunities." />
-  <meta property="og:url"         content="https://grparasky.github.io/portfolio-site/" />
-  <meta property="og:image" content="https://grparasky.github.io/portfolio-site/img/preview.png" />
+  <meta property="og:title"       content="Gabriel Parasky — Backend Developer | Python &amp; Java" />
+  <meta property="og:description" content="Backend Developer with 6+ years of experience in Python, data integration and ETL. Currently transitioning to Java and Spring Boot. Open to new opportunities." />
+  <meta property="og:url"         content="https://gabrielparasky.com.br/" />
+  <meta property="og:image"       content="https://gabrielparasky.com.br/img/preview.png" />
+  <meta property="og:locale"      content="pt_BR" />
 
   <!-- ===== SEO: TWITTER CARD ===== -->
   <meta name="twitter:card"        content="summary" />
-  <meta name="twitter:title"       content="Gabriel Parasky — Backend Developer" />
-  <meta name="twitter:description" content="Backend Developer with 6+ years of experience in data integration, ETL and Python. Open to new opportunities." />
+  <meta name="twitter:title"       content="Gabriel Parasky — Backend Developer | Python &amp; Java" />
+  <meta name="twitter:description" content="Backend Developer with 6+ years of experience in Python, data integration and ETL. Transitioning to Java and Spring Boot." />
 
   <!-- ===== SEO: JSON-LD (rich snippet no Google) ===== -->
   <script type="application/ld+json">
@@ -32,7 +33,7 @@
     "@type": "Person",
     "name": "Gabriel Rodrigo Parasky",
     "jobTitle": "Backend Developer",
-    "url": "https://grparasky.github.io/portfolio-site/",
+    "url": "https://gabrielparasky.com.br/",
     "email": "grparasky@gmail.com",
     "sameAs": [
       "https://www.linkedin.com/in/grparasky/",
@@ -44,7 +45,7 @@
       "addressRegion": "SC",
       "addressCountry": "BR"
     },
-    "knowsAbout": ["Python", "FastAPI", "ETL", "Data Integration", "PostgreSQL", "Docker", "GCP", "AWS"]
+    "knowsAbout": ["Python", "FastAPI", "ETL", "Data Integration", "PostgreSQL", "Docker", "GCP", "AWS", "Java", "Spring Boot"]
   }
   </script>
 
@@ -55,10 +56,10 @@
 
   <header>
     <nav class="navbar">
-      <div class="logo">Gabriel Parasky</div>
+      <a href="index.html" class="logo">Gabriel Parasky</a>
       <ul class="nav-links">
         <li><a class="nav-link active" data-page="home" data-i18n="nav-home">Home</a></li>
-        <li><a class="nav-link" data-page="projects" data-i18n="nav-projects">Projects</a></li>
+        <li><a class="nav-link" href="projects.html" data-i18n="nav-projects">Projects</a></li>
         <li><a class="nav-link" data-page="contact" data-i18n="nav-contact">Contact</a></li>
       </ul>
       <div class="nav-right">
@@ -68,7 +69,7 @@
     </nav>
     <div class="mobile-menu" id="mobileMenu">
       <a class="mobile-link active" data-page="home" data-i18n="nav-home">Home</a>
-      <a class="mobile-link" data-page="projects" data-i18n="nav-projects">Projects</a>
+      <a class="mobile-link" href="projects.html" data-i18n="nav-projects">Projects</a>
       <a class="mobile-link" data-page="contact" data-i18n="nav-contact">Contact</a>
     </div>
   </header>
@@ -82,7 +83,7 @@
         <p class="role" data-i18n="hero-role">Backend Developer</p>
         <p class="tagline" data-i18n="hero-tagline">Focused on data integration and extraction for internal information consolidation — passionate about solving complex problems with quality and continuous improvement.</p>
         <div class="hero-btns">
-          <button class="btn btn-primary" data-goto="projects" data-i18n="hero-btn-projects">View Projects</button>
+          <a href="projects.html" class="btn btn-primary" data-i18n="hero-btn-projects">View Projects</a>
           <button class="btn btn-outline" data-goto="contact" data-i18n="hero-btn-contact">Get in Touch</button>
         </div>
       </div>
@@ -100,6 +101,10 @@
           <div class="about-text fade-up">
             <p data-i18n-html="about-p1">Backend Developer with <strong>6+ years of experience</strong>, specializing in data integration and extraction for internal information consolidation. Passionate from an early age about solving complex problems and continuously refining my craft.</p>
             <p data-i18n="about-p2">Experienced working with agile teams using Scrum and Kanban methodologies, with a strong focus on continuous delivery and ensuring the highest quality for end clients.</p>
+            <div class="transition-callout">
+              <span class="callout-label" data-i18n="callout-label">In Transition</span>
+              <p data-i18n="callout-text">After years focused on Python, I'm actively migrating to Java — studying Spring Boot, OOP design patterns, and the JVM ecosystem to broaden my backend expertise.</p>
+            </div>
             <div class="info-grid">
               <div class="info-item">
                 <span class="info-label" data-i18n="info-location-label">Location</span>
@@ -263,6 +268,44 @@
       </div>
     </section>
 
+    <section class="learning">
+      <div class="container">
+        <h2 class="section-title fade-up" data-i18n="learning-title">Currently Learning</h2>
+        <div class="learning-grid">
+
+          <div class="learning-text fade-up">
+            <p data-i18n="learning-desc">After 6+ years building backend systems in Python — working with data integration, ETL pipelines and APIs — I'm actively transitioning to Java. My goal is to consolidate expertise in the technologies that dominate enterprise backend development in Brazil and globally.</p>
+            <p data-i18n="learning-why">My Python foundation translates directly: the engineering principles behind data extraction, API design and system integration are the same. The paradigm shift to strong typing and the JVM ecosystem is deliberate — Java and Spring Boot open doors to a broader range of roles and larger-scale systems.</p>
+          </div>
+
+          <div class="learning-stack fade-up">
+            <div class="skills-panel">
+              <h3 data-i18n="learning-stack-title">Java Stack in Progress</h3>
+              <div class="skill-group">
+                <h4>Core</h4>
+                <div class="tags">
+                  <span class="tag">Java</span>
+                  <span class="tag">OOP</span>
+                  <span class="tag">Maven</span>
+                  <span class="tag">JUnit</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h4>Framework</h4>
+                <div class="tags">
+                  <span class="tag">Spring Boot</span>
+                  <span class="tag">Spring MVC</span>
+                  <span class="tag">JPA / Hibernate</span>
+                </div>
+              </div>
+              <p class="learning-note" data-i18n="learning-note">Applying this stack in personal projects to reinforce concepts in practice.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <section class="education">
       <div class="container">
         <h2 class="section-title fade-up" data-i18n="edu-title">Education</h2>
@@ -287,33 +330,6 @@
       </div>
     </section>
 
-  </main>
-
-  <!-- ===== PROJECTS ===== -->
-  <main id="page-projects" class="page">
-    <div class="container page-wrap">
-      <h2 class="section-title" data-i18n="projects-title">Projects</h2>
-      <p class="page-sub" data-i18n="projects-sub">Featured works and contributions.</p>
-      <div class="projects-grid">
-
-        <a class="project-card featured fade-up" href="https://grparasky.github.io/mrp-drone-site/" target="_blank" rel="noopener">
-          <span class="feat-badge" data-i18n="proj-featured">Featured</span>
-          <img class="proj-preview" src="img/projects/mrp-drone-preview.png" alt="MRP Drone preview" />
-          <div class="proj-header">
-            <img src="https://gabrielparasky.com.br/img/projects/drone%20icon.png" alt="MRP Drone" class="proj-icon-img" />
-            <span class="badge-live" data-i18n="proj-live-status">Live</span>
-          </div>
-          <h3 data-i18n="proj1-title">MRP Drone</h3>
-          <p data-i18n="proj1-desc">Landing page for a drone photography and videography channel. Built as a freelance project, featuring hero, about, portfolio, contact and social sections.</p>
-          <div class="tags">
-            <span class="tag">Vite</span>
-            <span class="tag">React</span>
-            <span class="tag">CSS Modules</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
   </main>
 
   <!-- ===== CONTACT ===== -->
@@ -384,10 +400,14 @@
 
   <script src="app.js"></script>
   <script>
-    if (new URLSearchParams(window.location.search).get('lang') === 'pt') {
+    const _params = new URLSearchParams(window.location.search);
+    if (_params.get('lang') === 'pt') {
       if (typeof applyTranslations === 'function' && currentLang === 'en') {
-        applyTranslations('pt')
+        applyTranslations('pt');
       }
+    }
+    if (_params.get('page') === 'contact') {
+      navigate('contact');
     }
   </script>
 </body>

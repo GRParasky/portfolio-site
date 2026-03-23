@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-current-page="project">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRP Drone — Drone Photography Landing Page | Gabriel Parasky</title>
+
+  <!-- ===== SEO: META ===== -->
+  <meta name="description" content="MRP Drone is a professional landing page built by Gabriel Parasky for a drone photography and videography business. Developed with React, Vite and CSS Modules." />
+  <meta name="author" content="Gabriel Rodrigo Parasky" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://gabrielparasky.com.br/projects/mrp-drone.html" />
+
+  <!-- ===== SEO: OPEN GRAPH ===== -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="MRP Drone — Drone Photography Landing Page" />
+  <meta property="og:description" content="A professional landing page for a drone photography and videography business, developed by Gabriel Parasky using React, Vite and CSS Modules." />
+  <meta property="og:url"         content="https://gabrielparasky.com.br/projects/mrp-drone.html" />
+  <meta property="og:image"       content="https://gabrielparasky.com.br/img/projects/mrp-drone-preview.png" />
+
+  <!-- ===== SEO: TWITTER CARD ===== -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="MRP Drone — Drone Photography Landing Page" />
+  <meta name="twitter:description" content="A professional landing page for a drone photography and videography business, built with React and Vite." />
+  <meta name="twitter:image"       content="https://gabrielparasky.com.br/img/projects/mrp-drone-preview.png" />
+
+  <!-- ===== SEO: JSON-LD ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "MRP Drone",
+    "description": "Professional landing page for a drone photography and videography business. Built with React, Vite and CSS Modules.",
+    "url": "https://gabrielparasky.com.br/projects/mrp-drone.html",
+    "codeRepository": "https://github.com/GRParasky/mrp-drone-site",
+    "programmingLanguage": ["JavaScript", "React", "CSS"],
+    "author": {
+      "@type": "Person",
+      "name": "Gabriel Rodrigo Parasky",
+      "url": "https://gabrielparasky.com.br/"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Project detail page specific styles */
+    .project-detail { padding: 5rem 0 6rem; }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent2); }
+    .breadcrumb-sep { color: var(--border); }
+
+    .project-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+    .project-hero-img {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      display: block;
+    }
+    .project-hero-info { display: flex; flex-direction: column; gap: 1.25rem; }
+    .project-title-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .project-title-row img { width: 2.5rem; height: 2.5rem; object-fit: contain; }
+    .project-hero-info h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 800; color: #fff; line-height: 1.15; }
+    .project-hero-info .role { color: var(--muted); font-size: 1rem; line-height: 1.6; }
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .project-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.25rem; }
+
+    .project-sections { display: flex; flex-direction: column; gap: 3rem; }
+    .project-section {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .project-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+    .project-section p { color: var(--muted); line-height: 1.8; margin-bottom: 0.75rem; }
+    .project-section p:last-child { margin-bottom: 0; }
+    .project-section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .project-section ul li {
+      color: var(--muted);
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    .project-section ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .tech-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .tech-item h3 { font-size: 0.85rem; color: #fff; margin-bottom: 0.25rem; }
+    .tech-item p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+
+    .project-nav {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .project-nav a { font-size: 0.9rem; color: var(--muted); transition: color 0.2s; }
+    .project-nav a:hover { color: var(--accent2); }
+
+    @media (max-width: 768px) {
+      .project-hero { grid-template-columns: 1fr; }
+      .project-detail { padding: 3rem 0 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Gabriel Parasky</a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="../index.html" data-i18n="nav-home">Home</a></li>
+        <li><a class="nav-link active" href="../projects.html" data-i18n="nav-projects">Projects</a></li>
+        <li><a class="nav-link" href="../index.html?page=contact" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">PT</button>
+        <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a class="mobile-link" href="../index.html" data-i18n="nav-home">Home</a>
+      <a class="mobile-link active" href="../projects.html" data-i18n="nav-projects">Projects</a>
+      <a class="mobile-link" href="../index.html?page=contact" data-i18n="nav-contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container project-detail">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../projects.html">Projects</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>MRP Drone</span>
+      </nav>
+
+      <!-- Hero -->
+      <div class="project-hero fade-up">
+        <img
+          class="project-hero-img"
+          src="../img/projects/mrp-drone-preview.png"
+          alt="MRP Drone website screenshot — showing the hero section of the drone photography landing page"
+          loading="lazy"
+        />
+        <div class="project-hero-info">
+          <div class="project-title-row">
+            <img src="../img/projects/drone icon.png" alt="MRP Drone icon" />
+            <span class="badge-live">Live</span>
+          </div>
+          <h1>MRP Drone</h1>
+          <p class="role">Landing page for a professional drone photography and videography business. A freelance project designed to attract clients, showcase aerial work, and establish a credible online presence.</p>
+          <div class="project-meta tags">
+            <span class="tag">Vite</span>
+            <span class="tag">React</span>
+            <span class="tag">CSS Modules</span>
+            <span class="tag">GitHub Pages</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://grparasky.github.io/mrp-drone-site/" target="_blank" rel="noopener" class="btn btn-primary">Visit Live Site ↗</a>
+            <a href="../projects.html" class="btn btn-outline">← Back to Projects</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sections -->
+      <div class="project-sections">
+
+        <section class="project-section fade-up">
+          <h2>Overview</h2>
+          <p>MRP Drone is a professional landing page developed as a freelance project for a drone photography and videography business operating in Brazil. The site acts as the client's primary digital storefront — a place where potential customers can discover the service offering, browse past aerial work, and reach out to book a session.</p>
+          <p>The goal was to create a visually compelling, fast-loading website that would stand out in a competitive creative services market while being straightforward to maintain. The result is a single-page application with smooth scroll animations, a curated portfolio gallery, and a direct contact channel.</p>
+        </section>
+
+        <section class="project-section fade-up">
+          <h2>Problem</h2>
+          <p>The client operated a drone photography and videography service but had no dedicated web presence to support their business growth. Without a professional website, they faced several key challenges:</p>
+          <ul>
+            <li>Potential clients had no reliable way to view past work or understand the range of services offered.</li>
+            <li>The business relied entirely on word-of-mouth and social media, limiting its reach and perceived professionalism.</li>
+            <li>There was no centralised contact point — inquiries were scattered across different platforms.</li>
+            <li>The lack of a web presence made it harder to charge premium rates for a premium service.</li>
+          </ul>
+          <p>The brief was to solve all of these with a single, well-crafted website that was easy to maintain going forward.</p>
+        </section>
+
+        <section class="project-section fade-up">
+          <h2>Solution</h2>
+          <p>The delivered solution is a modern, responsive single-page landing site structured around the customer journey — from first impression to booking inquiry.</p>
+          <ul>
+            <li><strong>Hero section:</strong> Full-screen visual impact with a clear value proposition and call-to-action, immediately communicating the nature and quality of the service.</li>
+            <li><strong>About section:</strong> Introduces the photographer, building trust and a personal connection with potential clients.</li>
+            <li><strong>Portfolio gallery:</strong> A curated showcase of past aerial photography and videography projects, demonstrating the quality and range of work.</li>
+            <li><strong>Contact section:</strong> A streamlined form and direct social media links, making it easy for interested clients to get in touch.</li>
+            <li><strong>Social links:</strong> Integration with existing social channels to reinforce the brand and allow visitors to explore more content.</li>
+          </ul>
+          <p>The fully responsive layout ensures a consistent, high-quality experience from mobile phones to large desktop monitors.</p>
+        </section>
+
+        <section class="project-section fade-up">
+          <h2>Technologies</h2>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>React</h3>
+              <p>Component-based UI development for a maintainable, scalable structure even within a single-page layout.</p>
+            </div>
+            <div class="tech-item">
+              <h3>Vite</h3>
+              <p>Build tooling with fast development server and optimised production bundles for quick load times.</p>
+            </div>
+            <div class="tech-item">
+              <h3>CSS Modules</h3>
+              <p>Scoped component styles to prevent naming conflicts and keep the stylesheet maintainable as the project grows.</p>
+            </div>
+            <div class="tech-item">
+              <h3>GitHub Pages</h3>
+              <p>Free, reliable static hosting with automatic HTTPS and easy deployment from the repository.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section fade-up">
+          <h2>Challenges</h2>
+          <p>Several interesting technical and design challenges came up during development:</p>
+          <ul>
+            <li><strong>Image performance:</strong> Aerial photography images are large and high-resolution by nature. Balancing visual quality — essential for a photography portfolio — with fast page load times required careful compression and lazy loading strategies.</li>
+            <li><strong>Animation smoothness on mobile:</strong> The scroll-triggered animations needed to remain smooth at 60fps on lower-powered mobile devices, which required keeping animation complexity in check and relying on CSS transitions over JavaScript-driven animation where possible.</li>
+            <li><strong>Creative vs. performance trade-off:</strong> A photography portfolio naturally calls for bold visuals and large imagery. Every design decision had to weigh visual impact against loading performance, especially for users on mobile data connections.</li>
+            <li><strong>Responsive portfolio layout:</strong> The gallery needed to present both landscape drone photography and vertical/square formats gracefully across all screen sizes without awkward cropping or layout breaks.</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- Project navigation -->
+      <nav class="project-nav" aria-label="Project navigation">
+        <a href="../projects.html">← All Projects</a>
+        <a href="https://grparasky.github.io/mrp-drone-site/" target="_blank" rel="noopener">Visit Live Site ↗</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><span data-i18n="footer-text">Made with ❤️ by Gabriel Parasky ·</span> <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+  <script>
+    if (new URLSearchParams(window.location.search).get('lang') === 'pt') {
+      if (typeof applyTranslations === 'function') {
+        applyTranslations('pt');
+      }
+    }
+  </script>
+</body>
+</html>

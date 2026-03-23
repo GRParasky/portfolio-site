@@ -55,7 +55,7 @@ const translations = {
     'form-sending':           'Sending...',
     'form-success':           "✅ Message sent! I'll get back to you soon.",
     'footer-text':            'Made with ❤️ by Gabriel Parasky ·',
-    'title-home':             'Home — GRParasky',
+    'title-home':             'Gabriel Parasky — Backend Developer | Python & Java',
     'title-projects':         'Projects — GRParasky',
     'title-contact':          'Contact — GRParasky',
     'exp4-role':              'Data Intern',
@@ -69,6 +69,13 @@ const translations = {
     'exp6-desc':              'Joined the Data team focused on engineering activities in the Azure environment: script development with Databricks, data extraction from APIs, databases and spreadsheets, transformation with PySpark, loading with Spark, and pipeline structuring with Data Factory.',
     'exp-show-more':          'Show full experience',
     'exp-show-less':          'Show less',
+    'callout-label':          'In Transition',
+    'callout-text':           'After years focused on Python, I\'m actively migrating to Java — studying Spring Boot, OOP design patterns, and the JVM ecosystem to broaden my backend expertise.',
+    'learning-title':         'Currently Learning',
+    'learning-desc':          'After 6+ years building backend systems in Python — working with data integration, ETL pipelines and APIs — I\'m actively transitioning to Java. My goal is to consolidate expertise in the technologies that dominate enterprise backend development in Brazil and globally.',
+    'learning-why':           'My Python foundation translates directly: the engineering principles behind data extraction, API design and system integration are the same. The paradigm shift to strong typing and the JVM ecosystem is deliberate — Java and Spring Boot open doors to a broader range of roles and larger-scale systems.',
+    'learning-stack-title':   'Java Stack in Progress',
+    'learning-note':          'Applying this stack in personal projects to reinforce concepts in practice.',
   },
   pt: {
     'nav-home':               'Início',
@@ -125,7 +132,7 @@ const translations = {
     'form-sending':           'Enviando...',
     'form-success':           '✅ Mensagem enviada! Entrarei em contato em breve.',
     'footer-text':            'Feito com ❤️ por Gabriel Parasky ·',
-    'title-home':             'Início — GRParasky',
+    'title-home':             'Gabriel Parasky — Desenvolvedor Back-end | Python & Java',
     'title-projects':         'Projetos — GRParasky',
     'title-contact':          'Contato — GRParasky',
     'exp4-role':              'Estagiário de Dados',
@@ -139,11 +146,18 @@ const translations = {
     'exp6-desc':              'Integrei o time de Dados, atuando com foco em atividades de Engenharia em ambiente Azure: desenvolvimento de scripts com Databricks, extração de dados de APIs, bases de dados e planilhas, transformação com PySpark, carregamento com Spark e estruturação de Pipelines com Data Factory.',
     'exp-show-more':          'Ver experiência completa',
     'exp-show-less':          'Ver menos',
+    'callout-label':          'Em Transição',
+    'callout-text':           'Após anos focado em Python, estou em migração ativa para Java — estudando Spring Boot, padrões de design OOP e o ecossistema JVM para ampliar minha expertise em back-end.',
+    'learning-title':         'Em Aprendizado',
+    'learning-desc':          'Após 6+ anos desenvolvendo sistemas back-end em Python — trabalhando com integração de dados, pipelines ETL e APIs — estou em transição ativa para Java. Meu objetivo é consolidar expertise nas tecnologias que dominam o desenvolvimento back-end empresarial no Brasil e no mundo.',
+    'learning-why':           'Minha base em Python se traduz diretamente: os princípios de engenharia por trás da extração de dados, design de APIs e integração de sistemas são os mesmos. A mudança de paradigma para tipagem forte e o ecossistema JVM é deliberada — Java e Spring Boot abrem portas para um leque maior de papéis e sistemas de maior escala.',
+    'learning-stack-title':   'Stack Java em Progresso',
+    'learning-note':          'Aplicando essa stack em projetos pessoais para consolidar os conceitos na prática.',
   }
 };
 
 let currentLang = 'en';
-let currentPage = 'home';
+let currentPage = document.documentElement.dataset.currentPage || 'home';
 
 function applyTranslations(lang) {
   currentLang = lang;
@@ -176,7 +190,7 @@ function applyTranslations(lang) {
 
   // Keep experience expand button label in sync
   const expBtn = document.getElementById('expToggle');
-  expBtn.textContent = translations[lang][expExpanded ? 'exp-show-less' : 'exp-show-more'];
+  if (expBtn) expBtn.textContent = translations[lang][expExpanded ? 'exp-show-less' : 'exp-show-more'];
 }
 
 // ===== LANGUAGE TOGGLE =====
@@ -186,13 +200,16 @@ document.getElementById('langToggle').addEventListener('click', () => {
 
 // ===== EXPERIENCE EXPAND =====
 let expExpanded = false;
-document.getElementById('expToggle').addEventListener('click', () => {
-  expExpanded = !expExpanded;
-  const extra = document.getElementById('timelineExtra');
-  const btn   = document.getElementById('expToggle');
-  extra.classList.toggle('open', expExpanded);
-  btn.textContent = translations[currentLang][expExpanded ? 'exp-show-less' : 'exp-show-more'];
-});
+const _expToggleBtn = document.getElementById('expToggle');
+if (_expToggleBtn) {
+  _expToggleBtn.addEventListener('click', () => {
+    expExpanded = !expExpanded;
+    const extra = document.getElementById('timelineExtra');
+    const btn   = document.getElementById('expToggle');
+    extra.classList.toggle('open', expExpanded);
+    btn.textContent = translations[currentLang][expExpanded ? 'exp-show-less' : 'exp-show-more'];
+  });
+}
 
 // ===== NAVIGATION =====
 function navigate(page) {
@@ -211,9 +228,14 @@ function navigate(page) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Nav links click
+// Nav links click — only intercept SPA links (those with data-page); real href links navigate naturally
 document.querySelectorAll('.nav-link, .mobile-link').forEach(link => {
-  link.addEventListener('click', () => navigate(link.dataset.page));
+  link.addEventListener('click', (e) => {
+    if (link.dataset.page) {
+      e.preventDefault();
+      navigate(link.dataset.page);
+    }
+  });
 });
 
 // Hero buttons
@@ -227,7 +249,8 @@ document.querySelector('.menu-toggle').addEventListener('click', () => {
 });
 
 // ===== CONTACT FORM =====
-document.getElementById('contactForm').addEventListener('submit', async function (e) {
+const _contactForm = document.getElementById('contactForm');
+if (_contactForm) _contactForm.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const name    = document.getElementById('name').value.trim();

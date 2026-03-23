@@ -34,6 +34,7 @@ strong { color: #fff; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 .page { display: none; flex: 1; }
 .page.active { display: block; }
+main { flex: 1; }
 .page-wrap { padding: 5rem 1.5rem 6rem; max-width: 1100px; margin: 0 auto; }
 .page-sub { color: var(--muted); margin-bottom: 3rem; font-size: 1.05rem; }
 
@@ -276,6 +277,7 @@ header {
 .info-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 .badge-available {
   display: inline-block;
+  align-self: flex-start;
   background: rgba(52,211,153,0.15);
   color: var(--success);
   border: 1px solid rgba(52,211,153,0.3);
@@ -307,6 +309,57 @@ header {
   font-weight: 500;
 }
 
+/* ===== TRANSITION CALLOUT (About section) ===== */
+.transition-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: rgba(108,99,255,0.07);
+  border: 1px solid rgba(108,99,255,0.2);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  margin-top: 1.25rem;
+}
+.callout-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent2);
+}
+.transition-callout p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ===== CURRENTLY LEARNING SECTION ===== */
+.learning {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.learning-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2.5rem;
+  align-items: start;
+}
+.learning-text p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+.learning-text p:last-child { margin-bottom: 0; }
+.learning-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
 /* ===== EXPERIENCE ===== */
 .experience { padding: 5rem 0; }
 
@@ -334,7 +387,7 @@ header {
   padding-left: 2rem;
 }
 .timeline-extra.open {
-  max-height: 600px;
+  max-height: 1400px;
   opacity: 1;
 }
 
@@ -484,24 +537,6 @@ header {
   cursor: pointer;
 }
 
-.project-card::after {
-  content: '↗ Visit Site';
-  position: absolute;
-  inset: 0;
-  background: rgba(108,99,255,0.08);
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--accent2);
-  letter-spacing: 0.05em;
-  opacity: 0;
-  transition: opacity 0.2s;
-  pointer-events: none;
-}
-.project-card:hover::after { opacity: 1; }
 .project-card.featured { border-color: rgba(108,99,255,0.5); background: rgba(108,99,255,0.05); }
 
 .feat-badge {
@@ -525,7 +560,7 @@ header {
 .proj-link {
   font-size: 0.78rem;
   font-weight: 600;
-  padding: 0.3rem 0.7rem;
+  padding: 0.55rem 0.9rem;
   border-radius: 6px;
   background: var(--bg3);
   border: 1px solid var(--border);
@@ -533,10 +568,24 @@ header {
   transition: color 0.2s, border-color 0.2s;
 }
 .proj-link:hover { color: var(--text); border-color: var(--muted); }
+.proj-link.proj-details {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 3px 10px rgba(108,99,255,0.35);
+}
+.proj-link.proj-details:hover {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #fff;
+  opacity: 1;
+}
 .proj-link.proj-demo { color: var(--accent2); border-color: rgba(108,99,255,0.3); }
 .proj-link.proj-demo:hover { background: rgba(108,99,255,0.15); border-color: var(--accent); }
 
+.project-card h2,
 .project-card h3 { font-size: 1rem; color: #fff; }
+.project-card > a { display: block; }
 .project-card p { color: var(--muted); font-size: 0.9rem; flex: 1; }
 
 /* ===== CONTACT ===== */
@@ -635,7 +684,17 @@ footer {
   background: var(--bg2);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE — TABLET ===== */
+@media (max-width: 960px) and (min-width: 769px) {
+  .about-grid {
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: auto auto;
+  }
+  .about-photo { position: static; max-width: 180px; }
+  .skills-panel { grid-column: 1 / -1; }
+}
+
+/* ===== RESPONSIVE — MOBILE ===== */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .menu-toggle { display: block; }
@@ -657,5 +716,6 @@ footer {
 
   .page-wrap { padding: 3rem 1.25rem 4rem; }
 
-  .about, .experience, .education { padding: 3.5rem 0; }
+  .about, .experience, .education, .learning { padding: 3.5rem 0; }
+  .learning-grid { grid-template-columns: 1fr; }
 }
