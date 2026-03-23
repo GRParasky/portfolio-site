@@ -76,6 +76,41 @@ const translations = {
     'learning-why':           'My Python foundation translates directly: the engineering principles behind data extraction, API design and system integration are the same. The paradigm shift to strong typing and the JVM ecosystem is deliberate — Java and Spring Boot open doors to a broader range of roles and larger-scale systems.',
     'learning-stack-title':   'Java Stack in Progress',
     'learning-note':          'Applying this stack in personal projects to reinforce concepts in practice.',
+    // mrp-drone page
+    'mrp-role':               'Landing page for a professional drone photography and videography business. A freelance project designed to attract clients, showcase aerial work, and establish a credible online presence.',
+    'mrp-btn-visit':          'Visit Live Site ↗',
+    'mrp-btn-back':           '← Back to Projects',
+    'mrp-s1':                 'Overview',
+    'mrp-s1-p1':              'MRP Drone is a professional landing page developed as a freelance project for a drone photography and videography business operating in Brazil. The site acts as the client\'s primary digital storefront — a place where potential customers can discover the service offering, browse past aerial work, and reach out to book a session.',
+    'mrp-s1-p2':              'The goal was to create a visually compelling, fast-loading website that would stand out in a competitive creative services market while being straightforward to maintain. The result is a single-page application with smooth scroll animations, a curated portfolio gallery, and a direct contact channel.',
+    'mrp-s2':                 'Problem',
+    'mrp-s2-p1':              'The client operated a drone photography and videography service but had no dedicated web presence to support their business growth. Without a professional website, they faced several key challenges:',
+    'mrp-s2-li1':             'Potential clients had no reliable way to view past work or understand the range of services offered.',
+    'mrp-s2-li2':             'The business relied entirely on word-of-mouth and social media, limiting its reach and perceived professionalism.',
+    'mrp-s2-li3':             'There was no centralised contact point — inquiries were scattered across different platforms.',
+    'mrp-s2-li4':             'The lack of a web presence made it harder to charge premium rates for a premium service.',
+    'mrp-s2-p2':              'The brief was to solve all of these with a single, well-crafted website that was easy to maintain going forward.',
+    'mrp-s3':                 'Solution',
+    'mrp-s3-p1':              'The delivered solution is a modern, responsive single-page landing site structured around the customer journey — from first impression to booking inquiry.',
+    'mrp-s3-li1':             '<strong>Hero section:</strong> Full-screen visual impact with a clear value proposition and call-to-action, immediately communicating the nature and quality of the service.',
+    'mrp-s3-li2':             '<strong>About section:</strong> Introduces the photographer, building trust and a personal connection with potential clients.',
+    'mrp-s3-li3':             '<strong>Portfolio gallery:</strong> A curated showcase of past aerial photography and videography projects, demonstrating the quality and range of work.',
+    'mrp-s3-li4':             '<strong>Contact section:</strong> A streamlined form and direct social media links, making it easy for interested clients to get in touch.',
+    'mrp-s3-li5':             '<strong>Social links:</strong> Integration with existing social channels to reinforce the brand and allow visitors to explore more content.',
+    'mrp-s3-p2':              'The fully responsive layout ensures a consistent, high-quality experience from mobile phones to large desktop monitors.',
+    'mrp-s4':                 'Technologies',
+    'mrp-react-desc':         'Component-based UI development for a maintainable, scalable structure even within a single-page layout.',
+    'mrp-vite-desc':          'Build tooling with fast development server and optimised production bundles for quick load times.',
+    'mrp-cssmod-desc':        'Scoped component styles to prevent naming conflicts and keep the stylesheet maintainable as the project grows.',
+    'mrp-ghp-desc':           'Free, reliable static hosting with automatic HTTPS and easy deployment from the repository.',
+    'mrp-s5':                 'Challenges',
+    'mrp-s5-p1':              'Several interesting technical and design challenges came up during development:',
+    'mrp-s5-li1':             '<strong>Image performance:</strong> Aerial photography images are large and high-resolution by nature. Balancing visual quality — essential for a photography portfolio — with fast page load times required careful compression and lazy loading strategies.',
+    'mrp-s5-li2':             '<strong>Animation smoothness on mobile:</strong> The scroll-triggered animations needed to remain smooth at 60fps on lower-powered mobile devices, which required keeping animation complexity in check and relying on CSS transitions over JavaScript-driven animation where possible.',
+    'mrp-s5-li3':             '<strong>Creative vs. performance trade-off:</strong> A photography portfolio naturally calls for bold visuals and large imagery. Every design decision had to weigh visual impact against loading performance, especially for users on mobile data connections.',
+    'mrp-s5-li4':             '<strong>Responsive portfolio layout:</strong> The gallery needed to present both landscape drone photography and vertical/square formats gracefully across all screen sizes without awkward cropping or layout breaks.',
+    'mrp-nav-back':           '← All Projects',
+    'mrp-nav-visit':          'Visit Live Site ↗',
   },
   pt: {
     'nav-home':               'Início',
@@ -153,6 +188,41 @@ const translations = {
     'learning-why':           'Minha base em Python se traduz diretamente: os princípios de engenharia por trás da extração de dados, design de APIs e integração de sistemas são os mesmos. A mudança de paradigma para tipagem forte e o ecossistema JVM é deliberada — Java e Spring Boot abrem portas para um leque maior de papéis e sistemas de maior escala.',
     'learning-stack-title':   'Stack Java em Progresso',
     'learning-note':          'Aplicando essa stack em projetos pessoais para consolidar os conceitos na prática.',
+    // página mrp-drone
+    'mrp-role':               'Landing page para um negócio profissional de fotografia e videografia com drone. Projeto freelance desenvolvido para atrair clientes, apresentar trabalhos aéreos e estabelecer uma presença digital credível.',
+    'mrp-btn-visit':          'Visitar Site ↗',
+    'mrp-btn-back':           '← Voltar aos Projetos',
+    'mrp-s1':                 'Visão Geral',
+    'mrp-s1-p1':              'MRP Drone é uma landing page profissional desenvolvida como projeto freelance para um negócio de fotografia e videografia com drone no Brasil. O site funciona como vitrine digital do cliente — um espaço onde potenciais clientes podem descobrir os serviços, navegar pelos trabalhos aéreos e entrar em contato para agendar uma sessão.',
+    'mrp-s1-p2':              'O objetivo era criar um site visualmente impactante e de carregamento rápido, que se destacasse num mercado criativo competitivo e fosse fácil de manter. O resultado é uma single-page application com animações de scroll suaves, galeria de portfólio curada e canal de contato direto.',
+    'mrp-s2':                 'Problema',
+    'mrp-s2-p1':              'O cliente operava um serviço de fotografia e videografia com drone, mas não tinha presença digital dedicada para apoiar o crescimento do negócio. Sem um site profissional, enfrentava desafios importantes:',
+    'mrp-s2-li1':             'Potenciais clientes não tinham como visualizar trabalhos anteriores ou entender os serviços oferecidos.',
+    'mrp-s2-li2':             'O negócio dependia exclusivamente do boca a boca e das redes sociais, limitando alcance e credibilidade.',
+    'mrp-s2-li3':             'Não havia um canal de contato centralizado — as consultas chegavam por plataformas diferentes.',
+    'mrp-s2-li4':             'A ausência de presença digital dificultava cobrar valores premium por um serviço premium.',
+    'mrp-s2-p2':              'O desafio era resolver tudo isso com um único site bem construído e de fácil manutenção.',
+    'mrp-s3':                 'Solução',
+    'mrp-s3-p1':              'A solução entregue é uma landing page moderna e responsiva, estruturada em torno da jornada do cliente — da primeira impressão ao contato para orçamento.',
+    'mrp-s3-li1':             '<strong>Hero section:</strong> Impacto visual em tela cheia com proposta de valor clara e call-to-action, comunicando imediatamente a natureza e qualidade do serviço.',
+    'mrp-s3-li2':             '<strong>Seção sobre:</strong> Apresenta o fotógrafo, construindo confiança e conexão pessoal com potenciais clientes.',
+    'mrp-s3-li3':             '<strong>Galeria de portfólio:</strong> Vitrine curada de projetos anteriores de fotografia e videografia aérea, demonstrando a qualidade e diversidade do trabalho.',
+    'mrp-s3-li4':             '<strong>Seção de contato:</strong> Formulário simplificado e links diretos para redes sociais, facilitando o contato de clientes interessados.',
+    'mrp-s3-li5':             '<strong>Links sociais:</strong> Integração com os canais existentes para reforçar a marca e permitir que visitantes explorem mais conteúdo.',
+    'mrp-s3-p2':              'O layout totalmente responsivo garante uma experiência consistente e de alta qualidade em dispositivos móveis e monitores desktop.',
+    'mrp-s4':                 'Tecnologias',
+    'mrp-react-desc':         'Desenvolvimento de interface baseado em componentes para uma estrutura manutenível e escalável, mesmo num layout de página única.',
+    'mrp-vite-desc':          'Ferramenta de build com servidor de desenvolvimento rápido e bundles de produção otimizados para tempos de carregamento ágeis.',
+    'mrp-cssmod-desc':        'Estilos com escopo por componente para evitar conflitos de nomes e manter o CSS manutenível conforme o projeto cresce.',
+    'mrp-ghp-desc':           'Hospedagem estática gratuita e confiável com HTTPS automático e deploy facilitado a partir do repositório.',
+    'mrp-s5':                 'Desafios',
+    'mrp-s5-p1':              'Alguns desafios técnicos e de design interessantes surgiram durante o desenvolvimento:',
+    'mrp-s5-li1':             '<strong>Performance das imagens:</strong> Fotos aéreas são naturalmente grandes e de alta resolução. Equilibrar qualidade visual — essencial para um portfólio de fotografia — com tempos de carregamento rápidos exigiu compressão cuidadosa e estratégias de lazy loading.',
+    'mrp-s5-li2':             '<strong>Fluidez das animações no mobile:</strong> As animações acionadas por scroll precisavam manter 60fps em dispositivos de menor desempenho, exigindo controle da complexidade e preferência por transições CSS em vez de animações JavaScript.',
+    'mrp-s5-li3':             '<strong>Equilíbrio entre criatividade e performance:</strong> Um portfólio de fotografia pede visuais marcantes e imagens grandes. Cada decisão precisava ponderar impacto visual versus velocidade de carregamento, especialmente para usuários em dados móveis.',
+    'mrp-s5-li4':             '<strong>Layout responsivo do portfólio:</strong> A galeria precisava apresentar fotografias aéreas em paisagem e formatos verticais/quadrados de forma elegante em todos os tamanhos de tela, sem recortes ou quebras de layout.',
+    'mrp-nav-back':           '← Todos os Projetos',
+    'mrp-nav-visit':          'Visitar Site ↗',
   }
 };
 
@@ -183,7 +253,8 @@ function applyTranslations(lang) {
 
   // HTML lang attribute and page title
   document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
-  document.title = translations[lang]['title-' + currentPage];
+  const titleKey = 'title-' + currentPage;
+  if (translations[lang][titleKey]) document.title = translations[lang][titleKey];
 
   // Toggle button label (shows the language you can switch TO)
   document.getElementById('langToggle').textContent = lang === 'en' ? 'PT' : 'EN';
