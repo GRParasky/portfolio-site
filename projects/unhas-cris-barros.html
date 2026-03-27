@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-current-page="project">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unhas Cris Barros — Nail Salon Landing Page | Gabriel Parasky</title>
+
+  <!-- ===== SEO: META ===== -->
+  <meta name="description" content="Unhas Cris Barros is a professional landing page built by Gabriel Parasky for a nail salon in Penha, SC. Developed with React, Vite and CSS Modules, with a local SEO strategy." />
+  <meta name="author" content="Gabriel Rodrigo Parasky" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://gabrielparasky.com.br/projects/unhas-cris-barros.html" />
+
+  <!-- ===== SEO: OPEN GRAPH ===== -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Unhas Cris Barros — Nail Salon Landing Page" />
+  <meta property="og:description" content="A professional landing page for a nail salon in Penha, SC, developed by Gabriel Parasky using React, Vite and CSS Modules." />
+  <meta property="og:url"         content="https://gabrielparasky.com.br/projects/unhas-cris-barros.html" />
+  <meta property="og:image"       content="https://gabrielparasky.com.br/img/projects/unhas-cris-barros-preview.png" />
+
+  <!-- ===== SEO: TWITTER CARD ===== -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Unhas Cris Barros — Nail Salon Landing Page" />
+  <meta name="twitter:description" content="A professional landing page for a nail salon in Penha, SC, built with React and Vite." />
+  <meta name="twitter:image"       content="https://gabrielparasky.com.br/img/projects/unhas-cris-barros-preview.png" />
+
+  <!-- ===== SEO: JSON-LD ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Unhas Cris Barros",
+    "description": "Professional landing page for a nail salon in Penha, SC. Built with React, Vite and CSS Modules.",
+    "url": "https://gabrielparasky.com.br/projects/unhas-cris-barros.html",
+    "codeRepository": "https://github.com/GRParasky/unhas-cris-barros-site",
+    "programmingLanguage": ["JavaScript", "React", "CSS"],
+    "author": {
+      "@type": "Person",
+      "name": "Gabriel Rodrigo Parasky",
+      "url": "https://gabrielparasky.com.br/"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Project detail page specific styles */
+    .project-detail { padding: 5rem 0 6rem; }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+    .breadcrumb a { color: var(--muted); transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent2); }
+    .breadcrumb-sep { color: var(--border); }
+
+    .project-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+    .project-hero-img {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      display: block;
+    }
+    .project-hero-info { display: flex; flex-direction: column; gap: 1.25rem; }
+    .project-title-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .project-title-row img { width: 2.5rem; height: 2.5rem; object-fit: contain; border-radius: 50%; }
+    .project-hero-info h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 800; color: #fff; line-height: 1.15; }
+    .project-hero-info .role { color: var(--muted); font-size: 1rem; line-height: 1.6; }
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .project-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.25rem; }
+
+    .project-sections { display: flex; flex-direction: column; gap: 3rem; }
+    .project-section {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .project-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+    .project-section h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 1.5rem 0 0.75rem;
+    }
+    .project-section h3:first-of-type { margin-top: 1rem; }
+    .project-section p { color: var(--muted); line-height: 1.8; margin-bottom: 0.75rem; }
+    .project-section p:last-child { margin-bottom: 0; }
+    .project-section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .project-section ul li {
+      color: var(--muted);
+      padding-left: 1.25rem;
+      position: relative;
+      line-height: 1.7;
+    }
+    .project-section ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .tech-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    .tech-item h3 { font-size: 0.85rem; color: #fff; margin-bottom: 0.25rem; text-transform: none; letter-spacing: normal; }
+    .tech-item p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+
+    .project-nav {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .project-nav a { font-size: 0.9rem; color: var(--muted); transition: color 0.2s; }
+    .project-nav a:hover { color: var(--accent2); }
+
+    @media (max-width: 768px) {
+      .project-hero { grid-template-columns: 1fr; }
+      .project-detail { padding: 3rem 0 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">Gabriel Parasky</a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="../index.html" data-i18n="nav-home">Home</a></li>
+        <li><a class="nav-link active" href="../projects.html" data-i18n="nav-projects">Projects</a></li>
+        <li><a class="nav-link" href="../index.html?page=contact" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">PT</button>
+        <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a class="mobile-link" href="../index.html" data-i18n="nav-home">Home</a>
+      <a class="mobile-link active" href="../projects.html" data-i18n="nav-projects">Projects</a>
+      <a class="mobile-link" href="../index.html?page=contact" data-i18n="nav-contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container project-detail">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html" data-i18n="nav-home">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../projects.html" data-i18n="nav-projects">Projects</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Unhas Cris Barros</span>
+      </nav>
+
+      <!-- Hero -->
+      <div class="project-hero fade-up">
+        <img
+          class="project-hero-img"
+          src="../img/projects/unhas-cris-barros-preview.png"
+          alt="Unhas Cris Barros website — nail salon landing page in Penha, SC"
+          loading="lazy"
+        />
+        <div class="project-hero-info">
+          <div class="project-title-row">
+            <img src="../img/projects/unhas-cris-barros-icon.jpg" alt="Unhas Cris Barros logo" />
+            <span class="badge-live" data-i18n="proj-live-status">Live</span>
+          </div>
+          <h1>Unhas Cris Barros</h1>
+          <p class="role" data-i18n="ucb-role">Landing page for a professional nail salon business. A freelance project designed to attract local clients in Penha, SC, showcase services, and drive appointment bookings.</p>
+          <div class="project-meta tags">
+            <span class="tag">Vite</span>
+            <span class="tag">React</span>
+            <span class="tag">CSS Modules</span>
+            <span class="tag">GitHub Pages</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://grparasky.github.io/unhas-cris-barros-site/" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="ucb-btn-visit">Visit Live Site ↗</a>
+            <a href="../projects.html" class="btn btn-outline" data-i18n="ucb-btn-back">← Back to Projects</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sections -->
+      <div class="project-sections">
+
+        <section class="project-section fade-up">
+          <h2 data-i18n="ucb-s1">Overview</h2>
+          <p data-i18n="ucb-s1-p1">Unhas Cris Barros is a professional landing page developed as a freelance project for a nail salon specialising in gel nails, nail art, and hand spa treatments in Penha, SC. The site acts as the client's primary digital presence — a place where potential clients can discover the full range of services and book an appointment.</p>
+          <p data-i18n="ucb-s1-p2">A key focus of the project was local SEO: the site was built from the ground up with structured data, consistent NAP (Name, Address, Phone), and geo-targeting to help the business appear in local search results and Google Maps for customers in Penha and the surrounding area.</p>
+        </section>
+
+        <section class="project-section fade-up">
+          <h2 data-i18n="ucb-s2">Problem</h2>
+          <p data-i18n="ucb-s2-p1">The client operated a nail salon but relied entirely on Instagram and word-of-mouth to attract new clients. Without a dedicated website, several challenges limited business growth:</p>
+          <ul>
+            <li data-i18n="ucb-s2-li1">No web presence meant the business was invisible to anyone searching for local nail services on Google.</li>
+            <li data-i18n="ucb-s2-li2">Appointment bookings were handled manually through Instagram DMs, creating friction and inefficiency.</li>
+            <li data-i18n="ucb-s2-li3">There was no central place to communicate services, pricing, and location clearly to new clients.</li>
+            <li data-i18n="ucb-s2-li4">Without a website, it was harder to build the credibility needed to compete with established salons in the region.</li>
+          </ul>
+          <p data-i18n="ucb-s2-p2">The goal was to solve all of this with a fast, professional landing page built with local search visibility as a first-class requirement.</p>
+        </section>
+
+        <section class="project-section fade-up">
+          <h2 data-i18n="ucb-s3">Solution</h2>
+          <p data-i18n="ucb-s3-p1">The delivered solution is a responsive single-page landing site structured around the client's conversion goals — attracting local search traffic and converting visitors into booked appointments.</p>
+          <ul>
+            <li data-i18n-html="ucb-s3-li1"><strong>Hero section:</strong> High-impact visual with a clear service proposition and a prominent booking call-to-action.</li>
+            <li data-i18n-html="ucb-s3-li2"><strong>Services section:</strong> Clear breakdown of offered services — gel nails, nail art, hand spa, and traditional manicure — to match search intent.</li>
+            <li data-i18n-html="ucb-s3-li3"><strong>Portfolio gallery:</strong> Curated showcase of recent work pulled from the client's Instagram to build trust and demonstrate quality.</li>
+            <li data-i18n-html="ucb-s3-li4"><strong>Contact & booking section:</strong> WhatsApp integration and an external booking link (MaApp) for frictionless appointment scheduling.</li>
+            <li data-i18n-html="ucb-s3-li5"><strong>Local SEO:</strong> BeautySalon schema markup, consistent NAP, geo meta tags, and targeted keywords for Penha, SC and surrounding cities.</li>
+          </ul>
+          <p data-i18n="ucb-s3-p2">The fully responsive layout ensures a seamless experience from mobile — where the majority of local search traffic originates — to desktop.</p>
+        </section>
+
+        <section class="project-section fade-up">
+          <h2 data-i18n="ucb-s4">Technologies</h2>
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>React</h3>
+              <p data-i18n="ucb-react-desc">Component-based UI development for a maintainable, config-driven structure — the entire site is customised through a single client.js config file.</p>
+            </div>
+            <div class="tech-item">
+              <h3>Vite</h3>
+              <p data-i18n="ucb-vite-desc">Build tooling with fast development server and optimised production bundles, ensuring quick load times critical for mobile users.</p>
+            </div>
+            <div class="tech-item">
+              <h3>CSS Modules</h3>
+              <p data-i18n="ucb-cssmod-desc">Scoped component styles driven by a theme object in the client config, making visual rebranding a config change rather than a CSS rewrite.</p>
+            </div>
+            <div class="tech-item">
+              <h3>GitHub Pages</h3>
+              <p data-i18n="ucb-ghp-desc">Free, reliable static hosting with automatic HTTPS. Currently deployed at the GitHub Pages URL pending a custom domain.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-section fade-up">
+          <h2 data-i18n="ucb-s5">Pending Improvements</h2>
+          <p data-i18n="ucb-s5-p1">The following improvements are tracked and pending implementation or external action:</p>
+          <h3 data-i18n="ucb-s5-code-title">In-code (ready to implement)</h3>
+          <ul>
+            <li data-i18n-html="ucb-s5-li1"><strong>sitemap.xml</strong> — tells Google which pages to index and when they were last updated.</li>
+            <li data-i18n-html="ucb-s5-li2"><strong>robots.txt</strong> — instructs crawlers. Without it, crawler behaviour is assumed.</li>
+            <li data-i18n-html="ucb-s5-li3"><strong>openingHours in schema</strong> — Google uses this to show hours directly in search results. Awaiting confirmation from client.</li>
+            <li data-i18n-html="ucb-s5-li4"><strong>hasMap in schema</strong> — links the schema markup to Google Maps, reinforcing the business location signal.</li>
+            <li data-i18n-html="ucb-s5-li5"><strong>Real OG image</strong> — og:image currently points to a missing file. A 1200×630px image is needed so link previews work correctly on WhatsApp and Instagram.</li>
+          </ul>
+          <h3 data-i18n="ucb-s5-ext-title">External (requires client or third-party action)</h3>
+          <ul>
+            <li data-i18n-html="ucb-s5-ext-li1"><strong>Custom domain</strong> — update siteUrl across canonical, OG tags, and schema once the domain is confirmed.</li>
+            <li data-i18n-html="ucb-s5-ext-li2"><strong>Google Search Console</strong> — set up after publishing to monitor indexing and catch crawl errors.</li>
+            <li data-i18n-html="ucb-s5-ext-li3"><strong>Local citations</strong> — list the business on Apontador, Guia Mais, and Telelistas to build local authority.</li>
+            <li data-i18n-html="ucb-s5-ext-li4"><strong>Google reviews</strong> — the single biggest local ranking differentiator. Client needs to prompt existing customers.</li>
+            <li data-i18n-html="ucb-s5-ext-li5"><strong>Google Business Profile photos</strong> — improves click-through rate in Maps. Client to upload.</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <!-- Project navigation -->
+      <nav class="project-nav" aria-label="Project navigation">
+        <a href="../projects.html" data-i18n="ucb-nav-back">← All Projects</a>
+        <a href="https://grparasky.github.io/unhas-cris-barros-site/" target="_blank" rel="noopener" data-i18n="ucb-nav-visit">Visit Live Site ↗</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><span data-i18n="footer-text">Made with ❤️ by Gabriel Parasky ·</span> <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+  <script>
+    if (new URLSearchParams(window.location.search).get('lang') === 'pt') {
+      if (typeof applyTranslations === 'function') {
+        applyTranslations('pt');
+      }
+    }
+  </script>
+</body>
+</html>
