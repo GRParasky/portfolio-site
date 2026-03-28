@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-current-page="blog">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Gabriel Parasky | Backend Developer</title>
+
+  <!-- ===== SEO: META ===== -->
+  <meta name="description" content="Blog by Gabriel Rodrigo Parasky — articles on backend development, Python, Java, ETL pipelines, data integration, and freelance web development." />
+  <meta name="author" content="Gabriel Rodrigo Parasky" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://gabrielparasky.com.br/blog.html" />
+
+  <!-- ===== SEO: OPEN GRAPH ===== -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Blog — Gabriel Parasky | Backend Developer" />
+  <meta property="og:description" content="Articles on backend development, Python, Java, ETL pipelines, data integration, and freelance web development." />
+  <meta property="og:url"         content="https://gabrielparasky.com.br/blog.html" />
+  <meta property="og:image"       content="https://gabrielparasky.com.br/img/preview.png" />
+  <meta property="og:locale"      content="pt_BR" />
+
+  <!-- ===== SEO: TWITTER CARD ===== -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Blog — Gabriel Parasky | Backend Developer" />
+  <meta name="twitter:description" content="Articles on backend development, Python, Java, ETL pipelines, and freelance web development." />
+  <meta name="twitter:image"       content="https://gabrielparasky.com.br/img/preview.png" />
+
+  <!-- ===== SEO: JSON-LD ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Gabriel Parasky — Blog",
+    "description": "Articles on backend development, Python, Java, ETL pipelines, data integration, and freelance web development.",
+    "url": "https://gabrielparasky.com.br/blog.html",
+    "author": {
+      "@type": "Person",
+      "name": "Gabriel Rodrigo Parasky",
+      "url": "https://gabrielparasky.com.br/"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Gabriel Parasky</a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html" data-i18n="nav-home">Home</a></li>
+        <li><a class="nav-link" href="projects.html" data-i18n="nav-projects">Projects</a></li>
+        <li><a class="nav-link active" href="blog.html" data-i18n="nav-blog">Blog</a></li>
+        <li><a class="nav-link" href="index.html?page=contact" data-i18n="nav-contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">PT</button>
+        <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a class="mobile-link" href="index.html" data-i18n="nav-home">Home</a>
+      <a class="mobile-link" href="projects.html" data-i18n="nav-projects">Projects</a>
+      <a class="mobile-link active" href="blog.html" data-i18n="nav-blog">Blog</a>
+      <a class="mobile-link" href="index.html?page=contact" data-i18n="nav-contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container page-wrap">
+      <h1 class="section-title" data-i18n="blog-title">Blog</h1>
+      <p class="page-sub" data-i18n="blog-sub">Thoughts on backend development, data integration, and the craft of building software.</p>
+
+      <div class="blog-coming-soon fade-up">
+        <p class="blog-soon-icon">✍️</p>
+        <h2 data-i18n="blog-soon-title">Articles coming soon</h2>
+        <p data-i18n="blog-soon-desc">I'm currently writing the first articles for this blog — covering topics like transitioning from Python to Java, building ETL pipelines, and lessons from freelance web development. Stay tuned.</p>
+        <a href="https://www.linkedin.com/in/grparasky/" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="blog-soon-cta">Follow on LinkedIn for updates</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><span data-i18n="footer-text">Made with ❤️ by Gabriel Parasky ·</span> <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <style>
+    .blog-coming-soon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.25rem;
+      padding: 5rem 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .blog-soon-icon { font-size: 3rem; line-height: 1; }
+    .blog-coming-soon h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 700; color: #fff; }
+    .blog-coming-soon p { color: var(--muted); line-height: 1.8; }
+  </style>
+
+  <script src="app.js"></script>
+  <script>
+    if (new URLSearchParams(window.location.search).get('lang') === 'pt') {
+      if (typeof applyTranslations === 'function') {
+        applyTranslations('pt');
+      }
+    }
+  </script>
+</body>
+</html>
